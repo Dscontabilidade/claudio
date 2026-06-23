@@ -2,7 +2,7 @@
 
 export const site = {
   name: 'DSJ Contabilidade',
-  tagline: 'Simplificar a contabilidade é o nosso foco',
+  tagline: 'Contabilidade descomplicada para prestadores de serviços',
   whatsappNumber: '5500000000000', // troque pelo número real, com código do país (55) e DDD
   email: 'contato@dsjcontabilidade.com.br',
   instagram: 'https://instagram.com/dsjcontabilidade',

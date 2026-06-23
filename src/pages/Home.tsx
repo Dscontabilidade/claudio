@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <>
       <Seo
-        title="DSJ Contabilidade | Simplificar a contabilidade é o nosso foco"
+        title="DSJ Contabilidade | Contabilidade descomplicada para prestadores de serviços"
         description="Contabilidade online para todo o Brasil. Cuidamos do seu MEI, da sua empresa de serviços ou do seu negócio digital com simplicidade e atendimento humano."
       />
 
@@ -24,7 +24,7 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 py-20 sm:py-28 text-center">
           <Reveal>
             <h1 className="font-heading text-4xl sm:text-6xl font-semibold text-brand-black leading-tight">
-              Simplificar a contabilidade é o nosso foco
+              Pare de empreender no escuro
             </h1>
           </Reveal>
           <Reveal delay={0.1}>
