@@ -1,0 +1,38 @@
+name: Publicar na Hostinger
+
+# Roda automaticamente sempre que houver um push na branch main.
+# Builda o site (gera a pasta dist/) e envia por FTP para a Hostinger.
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar o código
+        uses: actions/checkout@v4
+
+      - name: Instalar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Instalar dependências
+        run: npm ci
+
+      - name: Gerar build de produção
+        run: npm run build
+
+      - name: Enviar para a Hostinger via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./dist/
+          # Troque pelo caminho da pasta pública do seu domínio na Hostinger.
+          # Domínio principal costuma ser /public_html/
+          # Domínio adicional costuma ser /domains/seudominio.com/public_html/
+          server-dir: ${{ secrets.FTP_SERVER_DIR }}
