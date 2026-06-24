@@ -1,14 +1,15 @@
 import { useState } from 'react'
-import { Link, NavLink } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
-import { site } from '../data/site'
+import { config, whatsappLink } from '../config'
 
+// Itens do menu. O "to" é o id da seção que ele rola até.
 const navItems = [
-  { to: '/', label: 'Início' },
-  { to: '/servicos', label: 'Serviços' },
-  { to: '/produtos', label: 'Produtos digitais' },
-  { to: '/sobre', label: 'Sobre' },
-  { to: '/contato', label: 'Contato' },
+  { to: '#inicio', label: 'Início' },
+  { to: '#servicos', label: 'Serviços' },
+  { to: '#para-quem', label: 'Para quem é' },
+  { to: '#produtos', label: 'Produtos' },
+  { to: '#conteudos', label: 'Conteúdos' },
+  { to: '#contato', label: 'Contato' },
 ]
 
 export default function Header() {
@@ -17,29 +18,34 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-brand-white/95 backdrop-blur border-b border-brand-gray-100">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 flex items-center justify-between h-16">
-        <Link
-          to="/"
+        <a
+          href="#inicio"
           className="font-heading text-xl font-semibold text-brand-black"
           onClick={() => setOpen(false)}
         >
-          {site.name}
-        </Link>
+          {config.brand.name}
+        </a>
 
         <nav className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
-            <NavLink
+            <a
               key={item.to}
-              to={item.to}
-              className={({ isActive }) =>
-                `text-sm font-medium transition-colors hover:text-brand-yellow-dark ${
-                  isActive ? 'text-brand-black underline' : 'text-brand-gray-700'
-                }`
-              }
+              href={item.to}
+              className="text-sm font-medium text-brand-gray-700 transition-colors hover:text-brand-black"
             >
               {item.label}
-            </NavLink>
+            </a>
           ))}
         </nav>
+
+        <a
+          href={whatsappLink()}
+          target="_blank"
+          rel="noreferrer"
+          className="hidden md:inline-flex items-center justify-center rounded-full bg-brand-black text-brand-white px-5 py-2.5 text-sm font-medium hover:bg-brand-gray-700 transition-colors"
+        >
+          Falar no WhatsApp
+        </a>
 
         <button
           type="button"
@@ -55,17 +61,24 @@ export default function Header() {
       {open && (
         <nav className="md:hidden border-t border-brand-gray-100 bg-brand-white px-4 sm:px-6 py-4 flex flex-col gap-4">
           {navItems.map((item) => (
-            <NavLink
+            <a
               key={item.to}
-              to={item.to}
+              href={item.to}
               onClick={() => setOpen(false)}
-              className={({ isActive }) =>
-                `text-base font-medium ${isActive ? 'text-brand-black' : 'text-brand-gray-700'}`
-              }
+              className="text-base font-medium text-brand-gray-700"
             >
               {item.label}
-            </NavLink>
+            </a>
           ))}
+          <a
+            href={whatsappLink()}
+            target="_blank"
+            rel="noreferrer"
+            onClick={() => setOpen(false)}
+            className="inline-flex items-center justify-center rounded-full bg-brand-black text-brand-white px-5 py-2.5 text-sm font-medium"
+          >
+            Falar no WhatsApp
+          </a>
         </nav>
       )}
     </header>

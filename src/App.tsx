@@ -1,22 +1,18 @@
-import { Route, Routes } from 'react-router-dom'
-import Layout from './components/Layout'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import WhatsappFloatButton from './components/WhatsappFloatButton'
 import Home from './pages/Home'
-import Servicos from './pages/Servicos'
-import Produtos from './pages/Produtos'
-import Sobre from './pages/Sobre'
-import Contato from './pages/Contato'
 
 function App() {
   return (
-    <Layout>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/servicos" element={<Servicos />} />
-        <Route path="/produtos" element={<Produtos />} />
-        <Route path="/sobre" element={<Sobre />} />
-        <Route path="/contato" element={<Contato />} />
-      </Routes>
-    </Layout>
+    <div className="min-h-screen flex flex-col">
+      <Header />
+      <main className="flex-1 pt-16">
+        <Home />
+      </main>
+      <Footer />
+      <WhatsappFloatButton />
+    </div>
   )
 }
 
