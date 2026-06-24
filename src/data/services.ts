@@ -55,12 +55,21 @@ export const services: Service[] = [
     icon: 'Receipt',
   },
   {
-    slug: 'consultoria-fiscal',
-    title: 'Consultoria fiscal',
+    slug: 'planejamento-tributario',
+    title: 'Planejamento tributário',
     shortDescription:
       'Te ajudamos a planejar impostos e tomar decisões financeiras com clareza, como um amigo especialista.',
     problem:
       'Você precisa tomar uma decisão importante (contratar, mudar de regime, investir) e quer entender o impacto fiscal antes.',
     icon: 'TrendingUp',
+  },
+  {
+    slug: 'transicao-mei-me',
+    title: 'Transição de MEI para ME',
+    shortDescription:
+      'Cuidamos de toda a mudança de enquadramento quando seu faturamento cresce, sem perder prazo nem benefício.',
+    problem:
+      'Seu MEI está perto do limite de faturamento (ou já passou) e você precisa migrar para ME sem dor de cabeça.',
+    icon: 'Building2',
   },
 ]

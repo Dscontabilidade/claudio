@@ -10,8 +10,7 @@ export default function Footer() {
           <p className="font-heading text-lg text-brand-white">{config.brand.name}</p>
           <p className="mt-2 text-sm text-brand-gray-300">{config.brand.tagline}.</p>
           <p className="mt-2 text-sm text-brand-gray-300">{config.contato.cidade}.</p>
-          <p className="mt-4 text-xs text-brand-gray-500">CNPJ: {config.contato.cnpj}</p>
-          <p className="text-xs text-brand-gray-500">{config.contato.crc}</p>
+          <p className="mt-4 text-xs text-brand-gray-500">{config.contato.crc}</p>
         </div>
 
         <div>

@@ -2,7 +2,7 @@ import type { Produto } from '../data/produtos'
 
 export default function ProductCard({ produto }: { produto: Produto }) {
   return (
-    <div className="relative flex flex-col rounded-2xl bg-brand-black overflow-hidden border border-brand-gray-700">
+    <div className="lift-on-hover relative flex flex-col rounded-2xl bg-brand-black overflow-hidden border border-brand-gray-700">
       {produto.maisVendido && (
         <span className="absolute top-3 right-3 z-10 rounded-full bg-brand-white text-brand-black text-xs font-medium px-3 py-1">
           Mais vendido

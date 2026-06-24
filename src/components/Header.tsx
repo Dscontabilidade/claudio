@@ -8,7 +8,6 @@ const navItems = [
   { to: '#servicos', label: 'Serviços' },
   { to: '#para-quem', label: 'Para quem é' },
   { to: '#produtos', label: 'Produtos' },
-  { to: '#conteudos', label: 'Conteúdos' },
   { to: '#contato', label: 'Contato' },
 ]
 

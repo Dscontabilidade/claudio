@@ -39,9 +39,9 @@ export const nichos: Nicho[] = [
     link: '#contato',
   },
   {
-    titulo: 'Representantes e autônomos',
+    titulo: 'Negócios digitais',
     descricao:
-      'Representantes comerciais e autônomos em geral que precisam de alguém de confiança cuidando da parte fiscal.',
+      'Social media, gestores de tráfego e designers que faturam prestando serviço para várias marcas ao mesmo tempo.',
     link: '#contato',
   },
 ]

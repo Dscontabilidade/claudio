@@ -16,7 +16,6 @@ export const config = {
   contato: {
     email: 'contato@dsjcontabilidade.com.br',
     cidade: 'Atendimento 100% online para todo o Brasil',
-    cnpj: '00.000.000/0001-00',
     crc: 'CRC 0000000/O-0',
   },
 
@@ -24,11 +23,8 @@ export const config = {
     instagram: 'https://instagram.com/dsjcontabilidade',
   },
 
-  // Números da faixa de credibilidade. Edite livremente.
-  stats: {
-    anosExperiencia: '8+',
-    clientesAtendidos: '500+',
-  },
+  // Foto usada na seção principal (hero). Troque o arquivo em public/ e o caminho aqui.
+  fotoPerfil: '/founder-photo.svg',
 
   // Link configurável do material gratuito (PDF, página de captura, etc).
   leadMagnet: {
